@@ -51,7 +51,7 @@ group :test do
 end
 
 group :development, :production do
-  # gem 'puma'
+  gem 'puma'
 end
 
 group :production do
