@@ -30,6 +30,8 @@ group :development do
   gem 'foreman'
   gem 'letter_opener'
   gem 'thin'
+  gem 'guard'
+  gem 'guard-livereload', require: false
 end
 
 group :development, :test do

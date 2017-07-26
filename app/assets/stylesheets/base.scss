@@ -6,131 +6,55 @@ $red: #b00b00;
   font-size: 4em;
 }
 
-.landing {
-  .introduction, .detail, .skills, .showcase, .contacts {
+ul {
+  padding: 0;
+}
+
+.project-show {
+  .container {
+    width: 80%;
+    margin: 0 auto;
+  }
+  .description, .test {
     border-bottom: 1px solid $border;
-    padding: 4em 2em;
   }
-
-  .detail, .skills {
-    p {
-      padding: 1em 2em;
-    }
+  ul {
+    margin: 2em 0;
   }
-  
-  .introduction {
-    h1 {
-      font-size: 4em;
-    }
-    .lead {
-      margin: 1em 0;
-    }
-    .highlights {
-      margin: 1em 0;
-      i, span {
-        font-size: 3em;
-      }
-      span:last-of-type {
-        font-weight: normal;
-      }
+  p.lead.text-center {
+    padding: 1em;
+  }
+  .cover {
+    width: 80%;
+    display: block;
+    padding: 1em;
+    margin: 3em auto;
+    img {
+      width: 100%;
     }
   }
-
-  .showcase {
-    h3 {
-      margin: 0 0 2em 0;
+  .showcase-img {
+    .square {
+      padding: 1em;
+      width: 30%;
+      img {
+        height: 170px;
+      }
     }
-    .showcase-img {
-      .wide, .square {
-        position: relative;
-        display: inline-block;
-        &:hover .overlay {
-          opacity: 1;
-        }
-        max-width: 750px;
-        box-sizing: border-box;
-      }
-      
-      a {
-        margin: 1px;
-        img {
-          height: 200px;
-          width: 100%;
-        }
-      }
-      .wide {
-        width: 66.3%;
-      }
-      .square {
-        width: 33%;
-      }
-      .overlay {
-        position: absolute;
-        top: 0;
-        bottom: 0;
-        left: 0;
-        right: 0;
-        height: auto;
-        width: auto;
-        opacity: 0;
-        transition: .5s ease;
-        background-color: $red;
-        .text {
-          color: white;
-          position: absolute;
-          top: 50%;
-          left: 50%;
-          transform: translate(-50%, -50%);
-          -ms-transform: translate(-50%, -50%);
-          .image-title {
-            font-size: 2em;
-          }
-        }
-      }
+    .overlay {
+      top: 1em;
+      left: 1em;
+      right: 1em;
+      bottom: 1em;
     }
   }
-
-  .skills {
-    overflow: hidden;
-    p.lead {
-      margin: 0;
-    }
-    .icons {
-      padding: 1em 0;
-    }
-  }
-
-  .contacts {
-    .fa {
-      color: $grey;
-    }
-    .fa-envelope {
-      color: white;
-      &:hover {
-        transform: scale(0.75);
-      }  
-    }
-    form {
-      width: 80%;
-      margin: 0 auto;
-      .btn {
-        float: left;
-        margin: 0 0 0 15px;
-      }
-    }
+  footer {
+    padding: 2em 0 5em 0;
   }
 }
 
 @media screen and (max-width: 767px) {
-  .wide, .square, img {
+  .cover {
     width: 100% !important;
-  }
-}
-
-@media screen and (max-width: 770px) {
-  .skills {
-    .col-md-6 {
-      margin: 0 0 2em 0;
-    }
   }
 }

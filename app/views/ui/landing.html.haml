@@ -13,11 +13,12 @@
         %span = ME
     .detail
       %p.lead
-        Hi, I am a software engineer specializing in web development with focusing on TDD principles.
-        I'm fluent in ruby on rails and React.
-        I'm currenly living in New York City,
-        and always enjoy working with and connecting to other talented individuals.
-        I'm always looking forward to expanding my potentials and skills,
+        Hi, I am a New York City based software engineer, specializing in web development with focusing on TDD principles.
+        I'm fluent in Ruby on Rails and React.
+        I'm regularly enjoy working with, and connecting to other talented individuals.
+        I'm always looking forward to expanding my potentials and skills. 
+        <br>
+        <br>
         If you like my work, or would like to have a chat, please let me know.
         I'd love to talk to you.
     .skills
@@ -86,13 +87,17 @@
       %form.form-horizontal
         %fieldset
           .form-group
+            %label.col-md-2.control-label{:for => "name"} Name
+            .col-md-10
+              %input#email.form-control{:placeholder => "Your Name", :type => "text"}
+          .form-group
             %label.col-md-2.control-label{:for => "email"} Email
             .col-md-10
               %input#email.form-control{:placeholder => "Email", :type => "text"}
           .form-group
-            %label.col-md-2.control-label{:for => "textArea"} About
+            %label.col-md-2.control-label{:for => "textArea"} Message
             .col-md-10
-              %textarea#textArea.form-control{:rows => "6", placeholder: "Hey, looking forward to getting back from you."}
+              %textarea#textArea.form-control{:rows => "6", placeholder: "Looking forward to getting back from you."}
           .form-group
             .col-md-offset-2
               %button.btn.btn-default{:type => "submit"} Submit

@@ -1,0 +1,87 @@
+.row.project-show.text-muted
+  .text-center
+    .jumbotron.alert-info
+      %h1 MyFlix
+      %h4.text-center A video subscription services.
+  %section.description.container
+    %p.lead.text-center Build with Ruby on Rails with TDD and DRY principles.
+    %hr
+    .cover
+      %img.img-fluid(src="/images/sample.png")
+    .col-md-6
+      %ul
+        %h4 Features
+        %li User authentication using bcrypt
+        %li Payments using Stripe API
+        %li Users can send emails inviting friends to join
+        %li Users can add, reorder, or delete videos from their queue
+        %li Users can rate and provide comments on videos
+        %li Users can follow other users
+        %li If a user invites a friend and that friend joins, the user will automatically follow their friend
+        %li Users receive a welcome email upon registration
+        %li Admins can add videos and video images (stored with S3)
+    .col-md-6
+      %ul
+        %h4 Development
+        %li Comprehensive unit, model, and integration test coverage with RSpec and Capybara
+        %li Sending emails with SMTP
+        %li Utilizes service object for Stripe API and decorators for models
+        %li Continuous development with Circle CI
+        %li Agile workflow environment
+        %li Uses a puma web server
+        %li Utilizes sidekiq background job for email sending
+        %li Uses Raven for monitoring production server errors
+        %li Heroku deployment utilized staging and production servers  
+  %section.test.container
+    .cover
+      %img.img-fluid(src="/images/sample.gif")
+    .col-md-6
+      %ul
+        %h4 Tests
+        %li User authentication using bcrypt
+        %li Payments using Stripe API
+        %li Users can send emails inviting friends to join
+        %li Users can add, reorder, or delete videos from their queue
+        %li Users can rate and provide comments on videos
+        %li Users can follow other users
+        %li If a user invites a friend and that friend joins, the user will automatically follow their friend
+        %li Users receive a welcome email upon registration
+        %li Admins can add videos and video images (stored with S3)
+    .col-md-6    
+      %ul
+        %h4 Deploy
+        %li User authentication using bcrypt
+        %li Payments using Stripe API
+        %li Users can send emails inviting friends to join
+        %li Users can add, reorder, or delete videos from their queue
+        %li Users can rate and provide comments on videos
+        %li Users can follow other users
+        %li If a user invites a friend and that friend joins, the user will automatically follow their friend
+        %li Users receive a welcome email upon registration
+        %li Admins can add videos and video images (stored with S3)
+    .cover
+      %img.img-fluid(src="/images/sample.gif")
+  %footer.text-center.container
+    %h4 MORE WORK
+    %p 
+      A SHOWCASE OF PROJECTS, <br>
+      DESIGN AND DEVELOPMENT.
+    .showcase-img
+      = link_to root_path, class: "square" do
+        %img(src="http://via.placeholder.com/200x200")
+        .overlay
+          .text
+            .image-title Myflix
+            %p A Video subscriber for customer.
+      = link_to root_path, class: "square" do
+        %img(src="http://via.placeholder.com/200x200")
+        .overlay
+          .text
+            .image-title Myflix
+            %p A Video subscriber for customer.
+      = link_to root_path, class: "square" do
+        %img(src="http://via.placeholder.com/200x200")
+        .overlay
+          .text
+            .image-title Myflix
+            %p A Video subscriber for customer.
