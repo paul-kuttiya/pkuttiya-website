@@ -1,0 +1,13 @@
+%nav.navbar.navbar-inverse
+  = link_to "Paul Kuttiya", root_path, class: "navbar-brand"
+  %ul.nav.navbar-nav.navbar-right
+    -# = link_to_active? "Root", root_path
+    %li
+      = link_to 'http://www.google.com' do
+        = fa_icon "github"
+    %li
+      = link_to 'http://www.google.com' do
+        = fa_icon "linkedin"
+    %li
+      = link_to 'mailto:w.kuttiya@gmail.com' do
+        = fa_icon "envelope"

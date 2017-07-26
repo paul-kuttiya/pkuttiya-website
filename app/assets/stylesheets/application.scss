@@ -1,0 +1,22 @@
+//font-awesome
+@import "font-awesome";
+
+//Import bootstrap-sprockets
+@import "bootstrap-sprockets";
+
+// Import theme variables
+@import "bootswatch/readable/variables";
+
+// Then bootstrap itself
+@import "bootstrap";
+
+// And finally bootswatch style itself
+@import "bootswatch/readable/bootswatch";
+
+//devicon
+@import "devicon";
+@import "devicon-colors";
+
+//application styles
+@import "base";
+@import 'pages/*';

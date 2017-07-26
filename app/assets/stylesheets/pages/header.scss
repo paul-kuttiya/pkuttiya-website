@@ -1,0 +1,16 @@
+//header
+nav {
+  .fa {
+    font-size: 1.25em;
+  }
+  //overide collaspe bar
+  ul {
+    float: right;
+    li {
+      display: inline-block !important;
+    }
+  }
+  a {
+    font-weight: bold;
+  }
+}
