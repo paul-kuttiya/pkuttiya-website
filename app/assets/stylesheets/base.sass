@@ -1,0 +1,58 @@
+$grey: #b3b3b3
+$border: #e7e7e7
+$red: #b00b00
+
+.icons i
+  font-size: 4em
+
+ul
+  padding: 0
+
+//show page
+.project-show
+
+  .container
+    width: 80%
+    margin: 0 auto
+    
+  .description, .test
+    border-bottom: 1px solid $border
+
+  ul
+    margin: 2em 0
+
+  p.lead.text-center
+    padding: 1em
+
+  .cover
+    width: 80%
+    display: block
+    padding: 1em
+    margin: 3em auto
+    
+    img
+      width: 100%
+
+  footer
+    padding: 2em 0 5em 0
+
+    .square
+      width: 300px
+      padding: 1em
+
+    .overlay
+      top: 1em
+      left: 1em
+      bottom: 1em
+      right: 1em  
+
+
+@media screen and (max-width: 770px)
+  .project-show
+    footer
+      .square
+        padding: 0 !important
+
+    .cover
+      width: 100%
+      padding: 0 !important
