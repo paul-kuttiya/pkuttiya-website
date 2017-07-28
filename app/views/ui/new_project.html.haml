@@ -1,0 +1,42 @@
+%form.container-fluid.new-project
+  .form-group
+    %label{:for => "title", :id => 'title'} Title
+    %input#title.form-control{:placeholder => "Project title", :type => "text"}
+  .form-group
+    %label{:for => "excerpt", :id => 'excerpt'} Excerpt
+    %input#excerpt.form-control{:placeholder => "Project excerpt", :type => "text"}
+  .form-group
+    %label{:for => "description", :id => 'description'} Description
+    %input#title.form-control{:placeholder => "Project description", :type => "text"}
+  .form-group
+    %label{:for => "cover", :id => 'cover'} Cover
+    %input#cover.form-control{:placeholder => "Project cover file name", :type => "text"}
+  .form-group
+    %label{:for => "screenshot", :id => 'screenshot'} Screenshot
+    %input#screenshot.form-control{:placeholder => "Project screenshot file name", :type => "text"}
+  .form-group
+    %label{:for => "gif", :id => 'gif'} Gif
+    %input#title.form-control{:placeholder => "Project gif file name", :type => "text"}  
+  .form-group
+    %label{:for => "features"} Features lists
+    %textarea#features.form-control{:rows => "6"}
+  .form-group
+    %label{:for => "development"} Development lists
+    %textarea#development.form-control{:rows => "6"}
+  .form-group
+    %label{:for => "tests"} Tests
+    %textarea#tests.form-control{:rows => "6"}
+  .form-group
+    %label{:for => "deploy"} Deploy
+    %textarea#deploy.form-control{:rows => "6"}  
+  %fieldset.form-group
+    %h6 Highlight
+    .form-check
+      %label.form-check-label
+        %input#highlight.form-check-input{:name => "highlight", :type => "radio", :value => "true"}
+        true
+    .form-check
+      %label.form-check-label
+        %input#highlight.form-check-input{:checked => "checked", :name => "highlight", :type => "radio", :value => "false"}
+        false
+  %button.btn.btn-primary{:type => "submit"} Submit

@@ -1,9 +1,8 @@
 Rails.application.routes.draw do
   get 'ui(/:action)', controller: "ui"
 
-  if Rails.env.production? 
-    root to: "pages#index"
-  else
-    root to: "ui#index"
-  end
+  root to: "pages#index"
+
+  resources :projects, only: [:create]
+  resources :projects, path: "/", only: [:new, :show, :edit, :update]
 end

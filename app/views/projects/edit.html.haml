@@ -1,0 +1,16 @@
+= bootstrap_form_for @project, class: "container-fluid" do |f|
+  = f.text_field :title, placeholder: "Project title", value: @project.title
+  = f.text_field :excerpt, placeholder: "Project excerpt", value: @project.excerpt
+  = f.text_field :description, placeholder: "Project description", value: @project.description
+  = f.text_field :cover, placeholder: "Project cover path", value: @project.cover
+  = f.text_field :screenshot, placeholder: "Project screenshot path", value: @project.screenshot
+  = f.text_field :gif, placeholder: "Project gif path", value: @project.gif
+  = f.text_area :features, label: "Features lists", rows: "6", value: join_newline(@project.features), multiple: true
+  = f.text_area :development, label: "Development lists", rows: "6", value: join_newline(@project.development), multiple: true
+  = f.text_area :tests, label: "Tests lists", rows: "6", value: join_newline(@project.tests), multiple: true
+  = f.text_area :deploy, label: "Deploy lists", rows: "6", value: join_newline(@project.deploy), multiple: true
+  = f.form_group :highlight do
+    %h5 Highlight
+    = f.radio_button :highlight, true, label: "true", checked: @project.highlight == true
+    = f.radio_button :highlight, false, label: false, checked: @project.highlight == false
+  = f.submit @project.new_record? ? "submit" : "update", class: "btn btn-danger"

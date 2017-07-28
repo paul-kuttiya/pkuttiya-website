@@ -1,0 +1,16 @@
+= bootstrap_form_for @project, class: "container-fluid" do |f|
+  = f.text_field :title, placeholder: "Project title"
+  = f.text_field :excerpt, placeholder: "Project excerpt"
+  = f.text_field :description, placeholder: "Project description"
+  = f.text_field :cover, placeholder: "Project cover path"
+  = f.text_field :screenshot, placeholder: "Project screenshot path"
+  = f.text_field :gif, placeholder: "Project gif path"
+  = f.text_area :features, label: "Features lists", rows: "6", value: nil, multiple: true
+  = f.text_area :development, label: "Development lists", rows: "6", value: nil, multiple: true
+  = f.text_area :tests, label: "Tests lists", rows: "6", value: nil, multiple: true
+  = f.text_area :deploy, label: "Deploy lists", rows: "6", value: nil, multiple: true
+  = f.form_group :highlight do
+    %h5 Highlight
+    = f.radio_button :highlight, true, label: true
+    = f.radio_button :highlight, false, label: false, checked: "checked"
+  = f.submit "submit", class: "btn btn-danger" 
