@@ -31,6 +31,7 @@ group :development do
   gem 'letter_opener'
   gem 'thin'
   gem 'guard'
+  gem "rack-livereload"
   gem 'guard-livereload', require: false
 end
 

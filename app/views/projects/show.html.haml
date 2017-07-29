@@ -1,13 +1,22 @@
-.row.project-show.text-muted
-  .text-center
-    .jumbotron.alert-info
-      %h1 MyFlix
-      %h4.text-center A video subscription services.
+.row.project-show
+  -# .text-center
+  -#   .jumbotron.alert-info{:style => "background-image: url(/images/todo.png);"}
+  .cover
+    %img.img-fluid(src="/images/sample.png")
   %section.description.container
-    %p.lead.text-center Build with Ruby on Rails with TDD and DRY principles.
+    .text-center  
+      %h1 MyFlix
+      %p.small A video subscription services.
     %hr
-    .cover
-      %img.img-fluid(src="/images/sample.png")
+    .col-md-8
+      %p
+        With the growing of modern broadcasting technology.  
+        Users tend to have more choices to access into video meterials. 
+        MyFlix is an application that solely permitting the admin team to have full control of their meterials, 
+        while subscriber need to make monthly payment to access the content. 
+        Suitable for entertainment industry and online classes.  
+    .col-md-4
+      = link_to "MyFlix", root_path  
     .col-md-6
       %ul
         %h4 Features
@@ -61,7 +70,7 @@
         %li Admins can add videos and video images (stored with S3)
     .cover
       %img.img-fluid(src="/images/sample.gif")
-  %footer.text-center
+  %section.footer.text-center.container
     %h3 MORE WORK
     %p 
       A SHOWCASE OF PROJECTS, <br>
@@ -69,19 +78,22 @@
     .showcase
       .showcase-img
         = link_to root_path, class: "square" do
-          %img(src="http://via.placeholder.com/200x200")
+          .img{:style => "background-image: url(/images/todo.png);"}
+          %h1.cover-logo MyFlix
           .overlay
             .text
               .image-title Myflix
               %p A Video subscriber for customer.
         = link_to root_path, class: "square" do
-          %img(src="http://via.placeholder.com/200x200")
+          .img{:style => "background-image: url(/images/todo.png);"}
+          %h1.cover-logo MyFlix
           .overlay
             .text
               .image-title Myflix
               %p A Video subscriber for customer.
         = link_to root_path, class: "square" do
-          %img(src="http://via.placeholder.com/200x200")
+          .img{:style => "background-image: url(/images/todo.png);"}
+          %h1.cover-logo MyFlix
           .overlay
             .text
               .image-title Myflix

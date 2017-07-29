@@ -1,6 +1,12 @@
 $grey: #b3b3b3
+$text: #333
 $border: #e7e7e7
 $red: #b00b00
+$blue: #5bc0de
+
+body
+  font-size: 18px
+  color: $text
 
 .icons i
   font-size: 4em
@@ -8,54 +14,66 @@ $red: #b00b00
 ul
   padding: 0
 
+.container
+  width: 80%
+  margin: 0 auto
+
 #new_project, .edit_project 
   padding: 2em 6em
 
 //show page
 .project-show
 
-  .container
-    width: 80%
-    margin: 0 auto
-    
+  .cover:first-of-type
+      max-width: 720px
+      margin-bottom: 0
+
+  section
+    padding: 2em 4em 
+
   .description, .test
+    padding-top: 0
     border-bottom: 1px solid $border
 
   ul
     margin: 2em 0
+    padding: 1em 0.2em
+    list-style: none
+    text-indent: -2px
+
+    li:before
+      content: '✔'
+      color: $blue
+      margin-left: -1em
+      margin-right: 5px
 
   p.lead.text-center
     padding: 1em
 
   .cover
-    width: 80%
-    display: block
     padding: 1em
     margin: 3em auto
     
     img
       width: 100%
 
-  footer
-    padding: 2em 0 5em 0
+  .footer
 
-    .square
-      width: 300px
-      padding: 1em
+    .showcase
+      border: none
 
-    .overlay
-      top: 1em
-      left: 1em
-      bottom: 1em
-      right: 1em  
+      .showcase-img
+        padding-top: 0
 
+      .img
+        height: 160px
 
 @media screen and (max-width: 770px)
   .project-show
-    footer
-      .square
-        padding: 0 !important
 
-    .cover
-      width: 100%
-      padding: 0 !important
+    section
+      padding-left: 0
+      padding-right: 0
+
+    section.footer.container
+      width: 100% 
