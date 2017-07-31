@@ -1,6 +1,6 @@
 .row.text-center.landing
   .col-md-8.col-md-offset-2
-    .introduction
+    %section.introduction
       %h1 Paul Kuttiya
       %br
       %h4.lead Softwore Engineer
@@ -11,16 +11,18 @@
         %span +
         %i.devicon-react-original-wordmark.colored
         %span = ME
-    .detail
+    %section.detail
       %p.lead
-        Hi, I am a software engineer specializing in web development with focusing on TDD principles.
-        I'm fluent in ruby on rails and React.
-        I'm currenly living in New York City,
-        and always enjoy working with and connecting to other talented individuals.
-        I'm always looking forward to expanding my potentials and skills,
+        Hi, I am a New York City based software engineer, specializing in web development with focusing on TDD and DRY principles.
+        I am fluent in Ruby on Rails and React.
+        I regularly enjoy working with, and connecting to other talented individuals.
+        <br>
+        <br>
+        <br>
+        I'm always looking forward to expanding my potentials and skills. 
         If you like my work, or would like to have a chat, please let me know.
         I'd love to talk to you.
-    .skills
+    %section.skills
       %h3 proficiencies
       .col-md-6
         %p.lead Language
@@ -33,7 +35,7 @@
           %i.devicon-rails-plain-wordmark.colored
           %i.devicon-react-plain-wordmark.colored
           %i.devicon-backbonejs-plain-wordmark.colored
-    .showcase
+    %section.showcase
       %h3 projects
       .showcase-img
         = link_to root_path, class: "wide" do
@@ -93,7 +95,7 @@
             .text
               .image-title Myflix
               %p A Video subscriber for customer.
-    .contacts
+    %section.contacts
       %h3 contact me
       = link_to "mailto:w.kuttiya@gmail.com" do
         = fa_stacked_icon "envelope", base: "circle", class: "fa-2x"

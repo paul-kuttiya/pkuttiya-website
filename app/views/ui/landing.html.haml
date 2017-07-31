@@ -1,4 +1,4 @@
-.row.text-muted.text-center.landing
+.row.text-center.landing
   .col-md-8.col-md-offset-2
     .introduction
       %h1 Paul Kuttiya
@@ -13,12 +13,13 @@
         %span = ME
     .detail
       %p.lead
-        Hi, I am a New York City based software engineer, specializing in web development with focusing on TDD principles.
-        I'm fluent in Ruby on Rails and React.
-        I'm regularly enjoy working with, and connecting to other talented individuals.
+        Hi, I am a New York City based software engineer, specializing in web development with focusing on TDD and DRY principles.
+        I am fluent in Ruby on Rails and React.
+        I regularly enjoy working with, and connecting to other talented individuals.
+        <br>
+        <br>
+        <br>
         I'm always looking forward to expanding my potentials and skills. 
-        <br>
-        <br>
         If you like my work, or would like to have a chat, please let me know.
         I'd love to talk to you.
     .skills
@@ -38,43 +39,58 @@
       %h3 projects
       .showcase-img
         = link_to root_path, class: "wide" do
-          %img(src="http://via.placeholder.com/400x200")
+          -# %img(src="/images/sushi.png")
+          .img{:style => "background-image: url(/images/myflix.png);"}
+          .cover-logo
+            %img(src="/images/myflix_logo.png")
           .overlay
             .text
-              .image-title Myflix
+              .image-title MyFlix
               %p A Video subscriber for customer.
         = link_to root_path, class: "square" do
-          %img(src="http://via.placeholder.com/200x200")
+          .img{:style => "background-image: url(/images/todo.png);"}
+          .cover-logo
+            %img(src="/images/todos_logo.png")
           .overlay
             .text
-              .image-title Myflix
+              .image-title Todos
               %p A Video subscriber for customer.
         = link_to root_path, class: "square" do
-          %img(src="http://via.placeholder.com/200x200")
+          .img{:style => "background-image: url(/images/weather.png);"}
+          .cover-logo
+            %img(src="/images/forecast_logo.png")
           .overlay
             .text
-              .image-title Myflix
+              .image-title Weather
               %p A Video subscriber for customer.
         = link_to root_path, class: "wide" do
-          %img(src="http://via.placeholder.com/400x200")
+          .img{:style => "background-image: url(/images/sushi.png);"}
+          .cover-logo
+            %img(src="/images/order_logo.png")
+          .overlay
+            .text
+              .image-title Sushi
+              %p A Video subscriber for customer.
+        = link_to root_path, class: "square" do
+          .img{:style => "background-image: url(/images/todo.png);"}
+          .cover-logo
+            %img(src="/images/forecast_logo.png")
           .overlay
             .text
               .image-title Myflix
               %p A Video subscriber for customer.
         = link_to root_path, class: "square" do
-          %img(src="http://via.placeholder.com/200x200")
+          .img{:style => "background-image: url(/images/myyelp.png);"}
+          .cover-logo
+            %img(src="/images/myyelp_logo.png")
           .overlay
             .text
               .image-title Myflix
               %p A Video subscriber for customer.
         = link_to root_path, class: "square" do
-          %img(src="http://via.placeholder.com/200x200")
-          .overlay
-            .text
-              .image-title Myflix
-              %p A Video subscriber for customer.
-        = link_to root_path, class: "square" do
-          %img(src="http://via.placeholder.com/200x200")
+          .img{:style => "background-image: url(/images/todo.png);"}
+          .cover-logo
+            %img(src="/images/myyelp_logo.png")
           .overlay
             .text
               .image-title Myflix
@@ -87,17 +103,13 @@
       %form.form-horizontal
         %fieldset
           .form-group
-            %label.col-md-2.control-label{:for => "name"} Name
-            .col-md-10
-              %input#email.form-control{:placeholder => "Your Name", :type => "text"}
-          .form-group
             %label.col-md-2.control-label{:for => "email"} Email
             .col-md-10
               %input#email.form-control{:placeholder => "Email", :type => "text"}
           .form-group
-            %label.col-md-2.control-label{:for => "textArea"} Message
+            %label.col-md-2.control-label{:for => "textArea"} About
             .col-md-10
-              %textarea#textArea.form-control{:rows => "6", placeholder: "Looking forward to getting back from you."}
+              %textarea#textArea.form-control{:rows => "6", placeholder: "Hey, looking forward to getting back from you."}
           .form-group
             .col-md-offset-2
               %button.btn.btn-default{:type => "submit"} Submit
