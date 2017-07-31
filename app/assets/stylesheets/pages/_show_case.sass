@@ -32,20 +32,26 @@
         margin: 0
         top: 50%
         transform: translateY(-50%)
-        color: white
-      
+        filter: brightness(0) invert(1)
+        
     .wide 
       width: 66.3%
-      
+
       .cover-logo
-        left: 10%
+        left: 2%
+
+        img
+          width: 60%
 
     .square 
       width: 33%
       
       .cover-logo
         width: 100%
-    
+
+        img
+          width: 60%
+
     .overlay 
       position: absolute
       top: 0.25em
@@ -79,6 +85,9 @@
     .cover-logo
       width: 100%
       left: 0 !important
+
+      img
+        width: 30% !important
       
     .img
       height: 200px !important

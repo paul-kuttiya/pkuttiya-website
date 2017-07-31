@@ -1,12 +1,12 @@
 .row.project-show
   -# .text-center
   -#   .jumbotron.alert-info{:style => "background-image: url(/images/todo.png);"}
+  .text-center  
+    %h1 MyFlix
+    %p.small A video subscription services.
   .cover
     %img.img-fluid(src="/images/sample.png")
   %section.description.container
-    .text-center  
-      %h1 MyFlix
-      %p.small A video subscription services.
     %hr
     .col-md-8
       %p
@@ -15,10 +15,22 @@
         MyFlix is an application that solely permitting the admin team to have full control of their meterials, 
         while subscriber need to make monthly payment to access the content. 
         Suitable for entertainment industry and online classes.  
-    .col-md-4
-      = link_to "MyFlix", root_path  
+      %ul.tags
+        %li.tag 
+          %span Ruby On Rails
+        %li.tag  
+          %span Database Design       
+    .col-md-4.col-sm-12.text-center
+      = link_to root_path, class: "text-center", target: "_blank" do
+        %img.logo(src="/images/myflix_logo.png")
+        .link
+          %p view live version
+          %svg{:height => "16", :viewbox => "0 0 16 16", :width => "16"}
+            %path.arrow{:d => "M11.83 9.828c.29.293.53.193.53-.22V4.392c0-.41-.338-.75-.75-.75H6.39c-.41 0-.51.24-.22.532l5.66 5.656z"}
+            %path.arrow{:d => "M7.78 10.94c-.394.396-1.038.396-1.435 0L5.06 9.65c-.398-.396-.398-1.04 0-1.436l3.92-3.92c.395-.396 1.038-.396 1.437 0L11.7 5.583c.4.396.4 1.04 0 1.437l-3.92 3.92z"}
+            %path{:d => "M9.078 11.18v1.47c0 .237-.19.43-.428.43H7.18l-.023.022-.023-.023H3.35c-.236 0-.428-.192-.428-.43V8.866L2.9 8.842l.022-.022V7.35c0-.236.192-.428.428-.428h1.47l1.5-1.5H3.35c-1.064 0-1.928.863-1.928 1.928v5.3c0 1.065.863 1.93 1.928 1.93h5.3c1.064 0 1.928-.864 1.928-1.93V9.68l-1.5 1.5z"}
     .col-md-6
-      %ul
+      %ul.checked
         %h4 Features
         %li User authentication using bcrypt
         %li Payments using Stripe API
@@ -30,7 +42,7 @@
         %li Users receive a welcome email upon registration
         %li Admins can add videos and video images (stored with S3)
     .col-md-6
-      %ul
+      %ul.checked
         %h4 Development
         %li Comprehensive unit, model, and integration test coverage with RSpec and Capybara
         %li Sending emails with SMTP
@@ -45,7 +57,7 @@
     .cover
       %img.img-fluid(src="/images/sample.gif")
     .col-md-6
-      %ul
+      %ul.checked
         %h4 Tests
         %li User authentication using bcrypt
         %li Payments using Stripe API
@@ -57,7 +69,7 @@
         %li Users receive a welcome email upon registration
         %li Admins can add videos and video images (stored with S3)
     .col-md-6    
-      %ul
+      %ul.checked
         %h4 Deploy
         %li User authentication using bcrypt
         %li Payments using Stripe API

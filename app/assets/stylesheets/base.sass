@@ -21,12 +21,51 @@ ul
 #new_project, .edit_project 
   padding: 2em 6em
 
+@media screen and (max-width: 415px)
+  .container
+    width: 95%
+
 //show page
 .project-show
 
-  .cover:first-of-type
+  > .cover
       max-width: 720px
       margin-bottom: 0
+      margin-top: 0 !important
+
+  a
+    text-decoration: none
+    padding: 0.25em
+    display: inline-block
+    width: auto
+
+    .link
+    
+      p
+        color: $red
+        display: inline-block
+
+    .logo
+      width: 175px
+      padding: 1em
+
+    //svg  
+    svg
+      display: inline-block
+      height: 24
+      width: 24
+      viewbox: "0 0 24 24"
+
+    path, path.arrow
+      fill: $red
+
+    &:hover
+
+      svg
+
+        path.arrow
+          transform: translate(2px, -2px)
+          transition: transform 0.5s ease-in-out
 
   section
     padding: 2em 4em 
@@ -35,8 +74,8 @@ ul
     padding-top: 0
     border-bottom: 1px solid $border
 
-  ul
-    margin: 2em 0
+  ul.checked
+    margin: 2em 0 2em 1em
     padding: 1em 0.2em
     list-style: none
     text-indent: -2px
