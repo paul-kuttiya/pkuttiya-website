@@ -13,7 +13,7 @@ class ProjectsController < ApplicationController
       redirect_to @project
     else
       render :new
-    end 
+    end
   end
 
   def update
