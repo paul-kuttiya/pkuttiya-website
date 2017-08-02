@@ -1,0 +1,3 @@
+= bootstrap_form_for @tag, label_col: "col-sm-2", control_col: "col-sm-10" do |f|
+  = f.text_field :name, placeholder: "Tag name", value: @tag.name
+  = f.submit @tag.new_record? ? "submit" : "update", class: "btn btn-danger"

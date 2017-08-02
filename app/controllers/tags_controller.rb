@@ -1,4 +1,6 @@
 class TagsController < ApplicationController
+  before_action :get_tag, only: [:edit, :update]
+  
   def new
     @tag = Tag.new
     @tags = Tag.all
@@ -15,8 +17,6 @@ class TagsController < ApplicationController
   end
 
   def update
-    @tag = Tag.find(params[:id])
-
     if @tag.update(tag_params)
       redirect_to new_tag_path
     else
@@ -27,5 +27,9 @@ class TagsController < ApplicationController
   private
   def tag_params
     params.require(:tag).permit!
+  end
+
+  def get_tag
+    @tag = Tag.find(params[:id])
   end
 end
