@@ -5,4 +5,6 @@ Rails.application.routes.draw do
 
   resources :projects, only: [:create]
   resources :projects, path: "/", only: [:new, :show, :edit, :update]
+
+  resources :tags, only: [:new, :create, :edit, :update]
 end

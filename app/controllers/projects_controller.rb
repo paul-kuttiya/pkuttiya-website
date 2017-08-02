@@ -1,12 +1,11 @@
 class ProjectsController < ApplicationController
   before_action :get_project, only: [:show, :edit, :update]
-  
+  before_action :serialize_lists, only: [:create, :update]  
   def new
     @project = Project.new
   end
 
   def create
-    serialize_array(:features, :developments, :tests, :deploys)
     @project = Project.new(project_params)
 
     if @project.save
@@ -17,8 +16,6 @@ class ProjectsController < ApplicationController
   end
 
   def update
-    serialize_array(:features, :developments, :tests, :deploys)
-
     if @project.update(project_params)
       redirect_to root_path
     else
@@ -37,6 +34,10 @@ class ProjectsController < ApplicationController
       lists_text = hash[col][0]
       hash[col] = split_new_line(lists_text)
     end
+  end
+
+  def serialize_lists
+    serialize_array(:features, :developments, :tests, :deploys)
   end
 
   def split_new_line(input)

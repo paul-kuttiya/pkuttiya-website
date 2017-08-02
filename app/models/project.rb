@@ -6,6 +6,10 @@ class Project < ActiveRecord::Base
   validates_presence_of :excerpt, :description
 
   def to_param
-    title.downcase.gsub(/\s/, "_")
+    lowcase_name.gsub(/\s/, "_")
+  end
+
+  def lowcase_name
+    title.downcase
   end
 end

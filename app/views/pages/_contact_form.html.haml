@@ -1,0 +1,16 @@
+= link_to "mailto:w.kuttiya@gmail.com" do
+  = fa_stacked_icon "envelope", base: "circle", class: "fa-2x"
+%p Email: w.kuttiya@gmail.com
+%form.form-horizontal
+  %fieldset
+    .form-group
+      %label.col-md-2.control-label{:for => "email"} Email
+      .col-md-10
+        %input#email.form-control{:placeholder => "Email", :type => "text"}
+    .form-group
+      %label.col-md-2.control-label{:for => "textArea"} About
+      .col-md-10
+        %textarea#textArea.form-control{:rows => "6", placeholder: "Hey, looking forward to getting back from you."}
+    .form-group
+      .col-md-offset-2
+        %button.btn.btn-default{:type => "submit"} Submit

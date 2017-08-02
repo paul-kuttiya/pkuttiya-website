@@ -1,9 +1,9 @@
 .row.project-show
-  .text-center  
+  .text-center
     %h1= @project.title
     %p.small 
   .cover
-    %img.img-fluid(src="/images/#{@project.cover}_cover.png")
+    %img.img-fluid(src="/images/cover/#{@project.lowcase_name}.png")
   %section.description.container
     %hr
     .col-md-8
@@ -15,7 +15,7 @@
     .col-md-4.col-sm-12.text-center
       - if @project.link
         = link_to @project.link, class: "text-center", target: "_blank" do
-          %img.logo(src="/images/#{@project.logo}_logo.png")
+          %img.logo(src="/images/logo/#{@project.lowcase_name}.png")
           .link
             %p view live version
             %svg{:height => "16", :viewbox => "0 0 16 16", :width => "16"}
@@ -23,37 +23,36 @@
               %path.arrow{:d => "M7.78 10.94c-.394.396-1.038.396-1.435 0L5.06 9.65c-.398-.396-.398-1.04 0-1.436l3.92-3.92c.395-.396 1.038-.396 1.437 0L11.7 5.583c.4.396.4 1.04 0 1.437l-3.92 3.92z"}
               %path{:d => "M9.078 11.18v1.47c0 .237-.19.43-.428.43H7.18l-.023.022-.023-.023H3.35c-.236 0-.428-.192-.428-.43V8.866L2.9 8.842l.022-.022V7.35c0-.236.192-.428.428-.428h1.47l1.5-1.5H3.35c-1.064 0-1.928.863-1.928 1.928v5.3c0 1.065.863 1.93 1.928 1.93h5.3c1.064 0 1.928-.864 1.928-1.93V9.68l-1.5 1.5z"}
       - else
-        %img.logo(src="/images/#{@project.logo}_logo.png")
-        .link
+        %img.logo(src="/images/logo/#{@project.lowcase_name}.png")
     - unless @project.features.empty?  
       .col-md-6
         %ul.checked
           %h4 Features
           - @project.features.each do |feature|
             %li= feature
-    - unless @project.developments.empty?    
+    - unless @project.developments.empty?
       .col-md-6
         %ul.checked
           %h4 Development
-          - @project.develpments.each do |d|
-            %li= d
+          - @project.developments.each do |develpment|
+            %li= develpment
   %section.test.container
     .cover
-      %img.img-fluid(src="/images/#{@project}_gif.gif")
+      %img.img-fluid(src="/images/gif/#{@project.lowcase_name}.gif")
     - unless @project.tests.empty?
       .col-md-6
         %ul.checked
           %h4 Tests
           - @project.tests.each do |test|
             %li= test
-    - unless @project.deploys.empty?    
+    - unless @project.deploys.empty?
       .col-md-6
         %ul.checked
           %h4 Deploy
           - @project.deploys.each do |deploy|
             %li= deploy
     .cover
-      %img.img-fluid(src="/images/#{@project.gif}_gif.gif")
+      %img.img-fluid(src="/images/test/#{@project.lowcase_name}.gif")
   %section.footer.text-center.container
     %h3 MORE WORK
     %p 

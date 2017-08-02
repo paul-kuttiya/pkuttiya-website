@@ -29,6 +29,7 @@ ActiveRecord::Schema.define(version: 20170801014824) do
     t.string "logo"
     t.string "screenshot"
     t.string "gif"
+    t.string "test_gif"
     t.text "description"
     t.text "features", default: [], array: true
     t.text "developments", default: [], array: true

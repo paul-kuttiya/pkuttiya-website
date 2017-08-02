@@ -1,0 +1,57 @@
+.showcase-img
+  = link_to root_path, class: "wide" do
+    .img{style: "background-image: url(/images/banner/#{highlights[0].lowcase_name}.png);"}
+    .cover-logo
+      %img(src="/images/logo/#{highlights[0].lowcase_name}.png")
+    .overlay
+      .text
+        .image-title #{highlights[0].title}
+        %p #{highlights[0].description}
+  = link_to root_path, class: "square" do
+    .img{:style => "background-image: url(/images/todo.png);"}
+    .cover-logo
+      %img(src="/images/todos_logo.png")
+    .overlay
+      .text
+        .image-title Todos
+        %p A Video subscriber for customer.
+  = link_to root_path, class: "square" do
+    .img{:style => "background-image: url(/images/weather.png);"}
+    .cover-logo
+      %img(src="/images/forecast_logo.png")
+    .overlay
+      .text
+        .image-title Weather
+        %p A Video subscriber for customer.
+  = link_to root_path, class: "wide" do
+    .img{:style => "background-image: url(/images/sushi.png);"}
+    .cover-logo
+      %img(src="/images/order_logo.png")
+    .overlay
+      .text
+        .image-title Sushi
+        %p A Video subscriber for customer.
+  = link_to root_path, class: "square" do
+    .img{:style => "background-image: url(/images/todo.png);"}
+    .cover-logo
+      %img(src="/images/forecast_logo.png")
+    .overlay
+      .text
+        .image-title Myflix
+        %p A Video subscriber for customer.
+  = link_to root_path, class: "square" do
+    .img{:style => "background-image: url(/images/myyelp.png);"}
+    .cover-logo
+      %img(src="/images/myyelp_logo.png")
+    .overlay
+      .text
+        .image-title Myflix
+        %p A Video subscriber for customer.
+  = link_to root_path, class: "square" do
+    .img{:style => "background-image: url(/images/todo.png);"}
+    .cover-logo
+      %img(src="/images/myyelp_logo.png")
+    .overlay
+      .text
+        .image-title Myflix
+        %p A Video subscriber for customer.
